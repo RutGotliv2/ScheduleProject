@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title>Klick Clock</title>
+    <link href="Style/bootstrap.min.css" rel="stylesheet" />
+    <link href="Style/MyStyle.css" rel="stylesheet" />
+    <link href="Style/StyleSheet1.css" rel="stylesheet" />
+    <script src="Scripts/Libraries/jquery.min.js"></script>
+    <script src="Scripts/Libraries/angular.min.js"></script>
+    <script src="Scripts/Libraries/angular-animate.js"></script>
+    <script src="Scripts/Libraries/bootstrap.min.js"></script>
+    <script src="Scripts/Libraries/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/Controllers/myCtrl.js"></script>
+    <script src="Scripts/Directives/clockDir.js"></script>
+    <script src="Scripts/Directives/analogClock.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    
+    <h1>Klick Clock</h1>
+   <!-- <div style="height:100%;width:10%;position:absolute;background:black"></div>
+    <div style="height:100%;width:10%;background:gray;float:right"></div>-->
+    <div style=" width:100%;height:20px;background-color:white;position:absolute">
+
+         <div style="width:100%;height:10px;background-color:orange;padding:0 2px"></div>
+    </div>
+    <div></div>
+
+    <div style="text-align: center; margin-top: 50px; width:100%">
+        <button class="button btn" ng-init="Enter=true" ng-disabled="Enter==false" ng-click="messegeMor=true; isEnter=true;messege=false">Enter</button>
+        <button class="button btn" ng-disabled="Enter==true" ng-click="isEnter=true">Exit</button>
+        <button class="button btn" ng-click="showSchedule=true; loadTable()">Show schedule</button>
+    </div>
+    <div dir="rtl" style="position:absolute;top:100px;right:0;left:0;bottom:0;margin:auto;z-index:-1">
+        
+
+
+        <ds-widget-clock theme="dark" show-secs="true" show-am-pm ></ds-widget-clock>
+   </div>
+    <div style="padding-left:10px">
+        
+        <div class="right" >
+            <div ng-if="messegeMor==true" class="myFadeAnimation base_div base">
+                Good Morning!!
+            </div>
+            <div ng-if="messege==true" class="slide base_div base">
+                good evening! you work {{SumHours}} hours!
+            </div>
+            <div ng-if="isEnter==true" class="myFadeAnimation">
+                <time-dir timetype="enterTime" timefunction=" EnterSave(enterTime)" cancel="isEnter=false"></time-dir>
+            </div>
+        </div>
+        <div ng-show="showSchedule==true" ng-if="showSchedule==true" style="float:right">
+            <table style="width: 84%; text-align: center;color:#f79224" >
+                <tr>
+                    <th class="th">Date</th>
+                    <th class="th">Enter</th>
+                    <th class="th">Exit</th>
+                    <th class="th">Hours</th>
+                    <th  class="th">Bonus</th>
+                </tr>
+                <tr ng-repeat="item in Arr">
+
+                    <td class="td">{{item.date|date:'MM/dd EEEE'}}</td>
+
+                    <td class="td">{{item.TimeEnter|date:'hh:mm:ss'}}</td>
+
+                    <td class="td">{{item.TimeExit|date:'hh:mm:ss'}}</td>
+
+                    <td class="td">{{item.SumHours}}</td>
+
+                    <td ng-if="item.bonus" style="font-size:30px">v</td>
+                </tr>
+            </table>
+            <button ng-click="showSchedule=false" class=" glyphicon glyphicon-remove-circle " style=" background: gray; width: 20%;height: 80px;font-size: 50px;"></button>
+            <button ng-click="loadTable()" class=" glyphicon glyphicon-refresh" style=" background: gray; width: 20%;height: 80px;font-size: 50px;"></button>
+        </div>
+        <div style="clear:both;float:none"></div>
+    </div>
+   
+
+
+
+
+</body>
+</html>

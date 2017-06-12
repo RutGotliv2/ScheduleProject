@@ -1,0 +1,316 @@
+﻿body
+{
+   background-color:black;
+}
+
+h1
+{
+    font-family: Gabriola;
+    color: #f79224;
+    text-align: center;
+    font-size: 100px;
+}
+
+.button
+{
+    text-align: center;
+    border-radius: 10px;
+    font-family: Gabriola;
+    font-style: oblique;
+    background: #cfcaca;
+    width: 20%;
+    height: 80px;
+    font-size: 50px;
+    color: #f79224;
+    font-weight: bolder;
+ 
+    margin: 0.5%;
+}
+
+.base
+{
+    font-family: Gabriola;
+    font-style: oblique;
+    background: #cfcaca;
+    font-weight: bolder;
+    color: black;
+    text-align:center;
+    font-weight: bolder;
+    font-size:40px;
+   
+}
+.base_div
+{
+    background:#f79224;
+    color:#cfcaca;
+}
+
+.right
+{
+    float: left;
+}
+
+button:hover
+{
+    color: white;
+    /*font-size: 70px;*/
+    /*background: rgb(0, 23, 159);*/
+    border-bottom: groove;
+}
+
+button:disabled:hover
+{
+    color: red;
+    background: white;
+}
+
+button
+{
+    border-radius: 10px;
+    font-family: Gabriola;
+    background: white;
+    width: 20%;
+    height: 80px;
+    font-size: 50px;
+    border-bottom: groove;
+    /*color: gray;*/
+}
+
+    button:disabled
+    {
+        border-radius: 10px;
+        font-family: Gabriola;
+        background:gray;
+        width: 20%;
+        height: 80px;
+        font-size: 50px;
+        
+        color: black;
+    }
+
+
+.buttonTimePicker
+{
+    border-radius: 10px;
+    font-family: Gabriola;
+    background: white;
+    width: 100px;
+    height: 50px;
+    font-size: 40px;
+    border-bottom: groove;
+    color: green;
+}
+
+buttonTimePicker:hover
+{
+    background: rgb(37, 190, 226);
+    color: white;
+    border-bottom: solid;
+}
+
+tr
+{
+    width: 40px;
+}
+
+.td
+{
+    border-left-color: transparent;
+    border-right-color: transparent;
+    color: white;
+    font-family: Gabriola;
+    font-size: 30px;
+    height: 100px;
+    padding: 5px 10px;
+}
+
+.th
+{
+    font-family: Gabriola;
+    font-size: 40px;
+    text-align: center;
+    font-stretch: wider;
+    padding: 5px 10px;
+}
+
+.messege
+{
+    font-family: Gabriola;
+    font-size: 40px;
+    background-color: green;
+    width: 27%;
+    height: 50%;
+    left: 2%;
+    text-align: center;
+}
+
+.message.ng-enter
+{
+    transition: 1s linear all;
+    opacity: 0;
+    left: -25%;
+}
+
+
+.messege.ng-enter-active
+{
+    opacity: 1;
+    color: white;
+}
+
+
+.widget-clock .digital
+{
+    text-align: center;
+}
+
+.widget-clock .time
+{
+    font-family: 'Syncopate',sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/*.widget-clock .square {
+    position: relative;
+    width: 85%;
+    height: 0;
+    padding-bottom: 37%;
+    margin: 100px;
+    color: red;
+}*/
+
+.widget-clock svg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.widget-clock .clock-face
+{
+    stroke: transparent;
+    fill: orange;
+    opacity:0.5;
+}
+
+.widget-clock .minor
+{
+    stroke: #999;
+    stroke-width: 0.5px;
+}
+
+.widget-clock .major
+{
+    stroke: #f79224;
+    stroke-width: 1;
+}
+
+.widget-clock .hour
+{
+    stroke: #f79224;
+}
+
+.widget-clock .minute
+{
+    stroke:#f79224;
+}
+
+.widget-clock .second
+{
+    stroke:#f79224;
+}
+
+.widget-clock .second-counterweight
+{
+    stroke:#f79224;
+    stroke-width: 3;
+}
+
+.widget-clock.dark .clock-face
+{
+    fill: transparent;
+}
+
+.widget-clock.dark .hour
+{
+    stroke: #666;
+}
+
+.widget-clock.dark .minute
+{
+    stroke: #999;
+}
+
+.myFadeAnimation
+{
+    border: 1px solid #000;
+    position: relative;
+    width: 500px;
+    left: 2%;
+}
+
+    .myFadeAnimation.ng-enter
+    {
+        transition: 1s linear all;
+        opacity: 0;
+        left: -25%;
+    }
+
+        /* The starting CSS styles for the enter animation */
+        .myFadeAnimation.ng-enter.ng-enter-active
+        {
+            opacity: 1;
+            left: 2%;
+        }
+
+    .myFadeAnimation.ng-leave
+    {
+        transition: 1s linear all;
+        opacity: 1;
+        left: 2%;
+    }
+
+        .myFadeAnimation.ng-leave.ng-leave-active
+        {
+            opacity: 0;
+            left: -25%;
+        }
+
+
+
+
+
+.myFadeAnimation2
+{
+    border: 1px solid #000;
+    position: relative;
+    width: 500px;
+    right: 2%;
+}
+
+    .myFadeAnimation2.ng-enter
+    {
+        transition: 1s linear all;
+        opacity: 0;
+        right: -25%;
+    }
+
+        /* The starting CSS styles for the enter animation */
+        .myFadeAnimation2.ng-enter.ng-enter-active
+        {
+            opacity: 1;
+            right: 2%;
+        }
+
+/*.myFadeAnimation2.ng-leave {
+     transition: 1s linear all;
+     opacity: 0;
+     right: 2%;
+ }
+
+     .myFadeAnimation2.ng-leave.ng-leave-active {
+         opacity: 0;
+         right: -25%;
+     }*/
